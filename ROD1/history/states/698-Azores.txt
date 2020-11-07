@@ -1,0 +1,35 @@
+state={
+	id=698
+	name="STATE_698"
+	manpower = 212012
+	
+	state_category = small_island
+	
+	history={
+		#owner = POR
+		victory_points = {
+			1751 3 
+		}
+		buildings = {
+			infrastructure = 3
+			1751 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = POR
+
+##State edits start
+
+##State edit for PTG after 1936.1.1
+1936.1.1 = {
+	add_core_of = PTG
+	owner = PTG
+	controller = PTG
+}
+
+##State edits end
+}
+provinces={
+		1751 
+	}
+}

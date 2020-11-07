@@ -1,0 +1,254 @@
+add_namespace = rodmod
+
+##Event: The Discordian Civil War
+country_event = {
+	id = rodmod.1
+	title = rodmod.1.title
+	desc = rodmod.1.desc
+	picture = GFX_report_event_usa_macarthur_speech
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	option = {
+		name = rodmod.1.a
+		ai_chance = { factor = 1}
+		start_civil_war= {
+ ideology = neutrality
+size = 0.5 
+}
+	}
+}
+##Event: Political Strife
+country_event = {
+	id = rodmod.2
+	title = rodmod.2.title
+	desc = rodmod.2.desc
+	picture = GFX_report_event_usa_election_generic
+	trigger = {
+		has_stability< 0.01
+	}
+	mean_time_to_happen = {
+		days = 120
+	}
+	option = {
+		name = rodmod.2.a
+		ai_chance = { factor = 1}
+		add_manpower= -12000
+	}
+}
+##Event: Military Talks
+country_event = {
+	id = rodmod.3
+	title = rodmod.3.title
+	desc = rodmod.3.desc
+	picture = GFX_report_event_yugoslavia_partisans
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	option = {
+		name = rodmod.3.a
+		ai_chance = { factor = 1}
+		add_manpower= 50000
+	}
+}
+##Event: rodmod.4
+country_event = {
+	id = rodmod.4
+	title = rodmod.4.title
+	desc = rodmod.4.desc
+	picture = GFX_event_test
+	is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 10000
+	}
+}
+##Event: The Imperial Conference
+country_event = {
+	id = rodmod.5
+	title = rodmod.5.title
+	desc = rodmod.5.desc
+	picture = GFX_news_event_herman_goring
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	option = {
+		name = rodmod.5.a
+		ai_chance = { factor = 1}
+		add_political_power= 200  add_stability = 0.2 news_event= rodmod.6
+	}
+}
+##Event: Imperial Conference in Amullia finds Compromise
+news_event = {
+	id = rodmod.6
+	title = rodmod.6.title
+	desc = rodmod.6.desc
+	picture = GFX_report_event_stalin_meeting
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	option = {
+		name = rodmod.6.a
+		ai_chance = { factor = 1}
+	}
+}
+##Event: The Darliani National Council
+country_event = {
+	id = rodmod.7
+	title = rodmod.7.title
+	desc = rodmod.7.desc
+	picture = GFX_report_event_spr_no_pasaran
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	option = {
+		name = rodmod.7.a
+		ai_chance = { factor = 1}
+		add_popularity= { 
+ideology = amullian
+popularity = 0.6
+}
+	}
+	option = {
+		name = rodmod.7.b
+		ai_chance = { factor = 1}
+		add_popularity= { 
+ideology = democratic
+popularity = 0.5
+}
+	}
+	option = {
+		name = rodmod.7.c
+		ai_chance = { factor = 1}
+		add_popularity= { 
+ideology = communism
+popularity = 0.6
+}
+	}
+	option = {
+		name = rodmod.7.d
+		ai_chance = { factor = 1}
+		add_popularity= { 
+ideology = fascism 
+popularity = 0.6
+}
+	}
+}
+##Event: Kramerian Free Republic Established!
+country_event = {
+	id = rodmod.8
+	title = rodmod.8.title
+	desc = rodmod.8.desc
+	picture = GFX_report_event_spain_civil_war_volunteers_02
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		has_completed_focus= KRA Declare_1st_Krameria_Republic
+	}
+	option = {
+		name = rodmod.8.a
+		ai_chance = { factor = 1}
+	}
+	option = {
+		name = rodmod.8.b
+		ai_chance = { factor = 1}
+		declare_war_on= { 
+target = RKRA 
+type = annex_everything 
+}
+	}
+	option = {
+		name = rodmod.8.c
+		ai_chance = { factor = 1}
+	}
+}
+##Event: The Imperial Conference -- COPY PLACEHOLDER
+country_event = {
+	id = political.28
+	title = rodmod.5.title
+	desc = rodmod.5.desc
+	picture = GFX_news_event_herman_goring
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	option = {
+		name = rodmod.5.a
+		ai_chance = { factor = 1}
+		add_political_power= 200  add_stability = 0.2 news_event= rodmod.6
+	}
+}
+##Event: Kramerian Republic Reunified
+country_event = {
+	id = rodmod.9
+	title = rodmod.9.title
+	desc = rodmod.9.desc
+	picture = GFX_report_event_generic_sign_treaty3
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	trigger = {
+		has_completed_focus= KRA Make_Peace_with_the_Free_Republic
+	}
+	option = {
+		name = rodmod.9.a
+		ai_chance = { factor = 1}
+	}
+	option = {
+		name = rodmod.9.b
+		ai_chance = { factor = 1}
+	}
+	option = {
+		name = rodmod.9.c
+		ai_chance = { factor = 3}
+		annex_country= {
+ target = RKRA 
+}
+	}
+	option = {
+		name = rodmod.9.d
+		ai_chance = { factor = 1}
+		white_peace= RKRA
+	}
+	option = {
+		name = rodmod.9.e
+		ai_chance = { factor = 1}
+		puppet= RKRA
+	}
+}
+##Event: Kramerian Petition for Autonomy
+country_event = {
+	id = rodmod.10
+	title = rodmod.10.title
+	desc = rodmod.10.desc
+	picture = GFX_report_event_king_speech
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		has_completed_focus= KRA_Send_Petition_to_the_Republic
+	}
+	option = {
+		name = rodmod.10.a
+		ai_chance = { factor = 1}
+	}
+	option = {
+		name = rodmod.10.b
+		ai_chance = { factor = 1}
+	}
+}
+##Event: Integration of Southern Ontario
+country_event = {
+	id = rodmod.11
+	title = rodmod.11.title
+	desc = rodmod.11.desc
+	picture = GFX_report_event_FDR_speech
+	trigger = {
+		owns_state= 276
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = rodmod.11.a
+		ai_chance = { factor = 1}
+		release= QUB  add_state_core= 276
+	}
+}

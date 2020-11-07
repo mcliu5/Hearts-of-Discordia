@@ -1,0 +1,9 @@
+spriteTypes = { 
+	##Icon For: Romulus - Owner
+	SpriteType = { 
+		name = "ROD_romulus__owner-60754"
+		texturefile = "gfx/interface/ideas/ROD_romulus__owner-60754.dds"
+	}
+
+ 
+ }

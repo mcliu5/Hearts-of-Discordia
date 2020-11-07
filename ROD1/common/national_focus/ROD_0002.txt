@@ -1,0 +1,645 @@
+focus_tree = {
+	id = 0002
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ROD
+		}
+	}
+	#Focus for Trial of the New York Five
+	focus = {
+		id = ROD_trial_of_the_new_york_five
+		icon = GFX_focus_BUL_form_a_regency_council
+		x = 14
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = ROD_preserve_the_union }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power= 50
+		}
+	}
+
+	#Focus for The Great Purge
+	focus = {
+		id = ROD_the_great_purge
+		icon = GFX_focus_spr_masters_of_our_own_fate
+		x = 16
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ROD_preserve_the_union }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability= -0.1  add_manpower= -8000
+		}
+	}
+
+	#Focus for Call Congress to Order
+	focus = {
+		id = ROD_call_congress_to_order
+		icon = GFX_goal_generic_improve_relations
+		x = 15
+		y = 8
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = ROD_the_election_of_the_century }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government= democratic
+		}
+		completion_reward = {
+			add_stability= 0.05  add_war_support= 5
+		}
+	}
+
+	#Focus for Civilian Command
+	focus = {
+		id = ROD_civilian_command
+		icon = GFX_focus_usa_recruit_the_free_corps
+		x = 22
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ROD_establish_the_department_of_defense 
+		}
+		prerequisite = { 
+			focus = ROD_permanent_military_influence 
+		}
+		mutually_exclusive = { focus = ROD_a_military_junta }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower
+= 120000
+		}
+	}
+
+	#Focus for Form District Two
+	focus = {
+		id = ROD_form_district_two
+		icon = GFX_goal_generic_construction2
+		x = 2
+		y = 4
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = ROD_district_governments_act }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power= -50
+		}
+	}
+
+	#Focus for Farmland for the Farmers
+	focus = {
+		id = ROD_farmland_for_the_farmers
+		icon = GFX_focus_spa_save_the_alcazar
+		x = 2
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ROD_form_district_two }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_offsite_building= { type = arms_factory level = 2 }
+  random_owned_controlled_state= {
+add_building_construction = {type = infrastructure
+level = 5
+instant_build = yes}
+
+}
+		}
+	}
+
+	#Focus for Establish the Port of Balion-Avalon
+	focus = {
+		id = ROD_establish_the_port_of_balionavalon
+		icon = GFX_focus_spr_anarchism_knows_no_borders
+		x = 4
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ROD_form_district_three }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_offsite_building= { type = civilian_factory level = 1 }
+  add_offsite_building= { type = arms_factory level = 1 }
+		}
+	}
+
+	#Focus for Establish the Electoral College
+	focus = {
+		id = ROD_establish_the_electoral_college
+		icon = GFX_focus_usa_voter_registration_act
+		x = 9
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ROD_work_for_the_workers 
+		}
+		prerequisite = { 
+			focus = ROD_establish_the_port_of_balionavalon 
+		}
+		prerequisite = { 
+			focus = ROD_farmland_for_the_farmers 
+		}
+		mutually_exclusive = { focus = ROD_establish_the_council_of_states }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_country_flag= electoral_college  add_ideas= ROD_electoral_college
+		}
+	}
+
+	#Focus for Establish the Republic
+	focus = {
+		id = ROD_establish_the_republic
+		icon = GFX_goal_support_democracy
+		x = 7
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power= 100
+set_major = yes
+		}
+	}
+
+	#Focus for District Governments Act
+	focus = {
+		id = ROD_district_governments_act
+		icon = GFX_goal_generic_improve_relations
+		x = 2
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability= 0.10
+		}
+	}
+
+	#Focus for Work for the Workers
+	focus = {
+		id = ROD_work_for_the_workers
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ROD_form_district_one }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state={
+ limit = {
+ free_building_slots = {
+ building = industrial_complex
+ size > 0
+ include_locked = yes
+ }
+
+ }
+
+ add_extra_state_shared_building_slots = 1
+ add_building_construction = {
+ type = industrial_complex
+ level = 1
+ instant_build = yes
+ }
+
+ set_state_flag = REPLACE_ME_WITH_UNIQUE_IDENTIFIER
+ }
+		}
+	}
+
+	#Focus for The Avalonia Conference
+	focus = {
+		id = ROD_the_avalonia_conference
+		icon = GFX_focus_usa_focus_on_europe
+		x = 7
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ROD_form_district_three }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal= { 
+type = annex_everything 
+target = AVA
+}
+		}
+	}
+
+	#Focus for Form District One
+	focus = {
+		id = ROD_form_district_one
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 0
+		y = 4
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = ROD_district_governments_act }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power= -50
+		}
+	}
+
+	#Focus for Preserve the Union
+	focus = {
+		id = ROD_preserve_the_union
+		icon = GFX_goal_generic_improve_relations
+		x = 16
+		y = 5
+		cost = 14
+		available_if_capitulated = yes
+		prerequisite = { focus = ROD_the_coup_of_the_convention }
+		mutually_exclusive = { focus = ROD_REzNHICV }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = -200
+add_stability = 0.2
+add_war_support = -0.25
+		}
+	}
+
+	#Focus for Elect Congress
+	focus = {
+		id = ROD_elect_congress
+		icon = GFX_goal_tripartite_pact
+		x = 8
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ROD_oqIFMDZU }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Contact The Military
+	focus = {
+		id = ROD_contact_the_military
+		icon = GFX_goal_generic_political_pressure
+		x = 19
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ROD_the_coup_of_the_convention }
+		mutually_exclusive = { focus = ROD_preserve_the_union }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.8
+add_war_support = 0.25
+army_experience = 20
+navy_experience = 10
+air_experience = 10
+		}
+	}
+
+	#Focus for Form District Three
+	focus = {
+		id = ROD_form_district_three
+		icon = GFX_goal_generic_national_unity
+		x = 4
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = ROD_district_governments_act }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power= 10
+		}
+	}
+
+	#Focus for Oppose Romulus
+	focus = {
+		id = ROD_oppose_romulus
+		icon = GFX_focus_AST_never_gallipoli
+		x = 16
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ROD_establish_the_republic }
+		mutually_exclusive = { focus = ROD_oqIFMDZU }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = -0.3
+add_political_power = -50
+		}
+	}
+
+	#Focus for Establish the Council of States
+	focus = {
+		id = ROD_establish_the_council_of_states
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 13
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ROD_work_for_the_workers 
+		}
+		prerequisite = { 
+			focus = ROD_farmland_for_the_farmers 
+		}
+		prerequisite = { 
+			focus = ROD_establish_the_port_of_balionavalon 
+		}
+		mutually_exclusive = { focus = ROD_establish_the_electoral_college }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_country_flag= council_of_states  add_ideas= ROD_council_of_states
+		}
+	}
+
+	#Focus for Back the Anti-Romulant Coalition
+	focus = {
+		id = ROD_back_the_antiromulant_coalition
+		icon = GFX_goal_generic_demand_territory
+		x = 16
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ROD_oppose_romulus }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 150
+add_stability = -0.1
+add_war_support = 0.25
+set_political_party
+= { ideology = democratic popularity = 1 }
+set_party_name
+= { ideology = democratic long_name = Nationalist_Movement name = Nationalist }
+		}
+	}
+
+	#Focus for The Coup of the Convention
+	focus = {
+		id = ROD_the_coup_of_the_convention
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 16
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ROD_back_the_antiromulant_coalition }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event
+= { days = 1 id = rodmod.1 }
+add_stability = -0.5
+add_political_power = -200
+		}
+	}
+
+	#Focus for Militarize the Northern Border
+	focus = {
+		id = ROD_militarize_the_northern_border
+		icon = GFX_goal_generic_major_war
+		x = 22
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience= 5
+		}
+	}
+
+	#Focus for Free and Fair Elections
+	focus = {
+		id = ROD_free_and_fair_elections
+		icon = GFX_goal_generic_propaganda
+		x = 10
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ROD_establish_the_republic }
+		mutually_exclusive = { focus = ROD_oppose_romulus }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 25
+set_political_party
+= { ideology = neutrality popularity = 0.56 }
+		}
+	}
+
+	#Focus for Build the Pentagon
+	focus = {
+		id = ROD_build_the_pentagon
+		icon = GFX_focus_usa_build_the_pentagon
+		x = 29
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			has_army_experience> 5  navy_experience= 10  army_experience= 10  air_experience= 10
+		}
+	}
+
+	#Focus for Establish the Department of Defense
+	focus = {
+		id = ROD_establish_the_department_of_defense
+		icon = GFX_goal_generic_military_sphere
+		x = 28
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ROD_build_the_pentagon 
+		}
+		prerequisite = { 
+			focus = ROD_militarize_the_northern_border 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Romulus Ascendant
+	focus = {
+		id = ROD_romulus_ascendant
+		icon = GFX_goal_support_democracy
+		x = 10
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ROD_free_and_fair_elections }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Establish the Department of Homeland Security
+	focus = {
+		id = ROD_establish_the_department_of_homeland_security
+		icon = GFX_focus_jap_strike_south
+		x = 30
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ROD_build_the_pentagon }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Department of Infrastructure
+	focus = {
+		id = ROD_department_of_infrastructure
+		icon = GFX_goal_generic_neutrality_focus
+		x = 35
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability= 0.05
+		}
+	}
+
+	#Focus for Permanent Military Influence
+	focus = {
+		id = ROD_permanent_military_influence
+		icon = GFX_goal_generic_axis_build_infantry
+		x = 19
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ROD_contact_the_military }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = -0.1
+add_war_support = 0.1
+army_experience = 10
+send_equipment
+= { target = ROD type = infantry_equipment amount = 15500 }
+		}
+	}
+
+	#Focus for Conquer the Northern Borderlands
+	focus = {
+		id = ROD_conquer_the_northern_borderlands
+		icon = GFX_goal_generic_small_arms
+		x = 22
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ROD_militarize_the_northern_border }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal= { 
+type = annex_everything 
+target = NOR
+}
+		}
+	}
+
+	#Focus for A Military Junta
+	focus = {
+		id = ROD_a_military_junta
+		icon = GFX_focus_generic_manpower
+		x = 19
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ROD_permanent_military_influence }
+		mutually_exclusive = { focus = ROD_civilian_command }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			send_equipment
+= { target = ROD type = infantry_equipment amount = 250000 }
+send_equipment
+= { target = ROD type = artillery amount = 25000 }
+add_manpower = 300000
+army_experience = 15
+navy_experience = 15
+air_experience = 15
+		}
+	}
+
+	#Focus for The Election of the Century
+	focus = {
+		id = ROD_the_election_of_the_century
+		icon = GFX_goal_support_democracy
+		x = 16
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ROD_trial_of_the_new_york_five 
+		}
+		prerequisite = { 
+			focus = ROD_the_great_purge 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability= 0.05  add_popularity= { 
+ideology = democratic
+popularity = 0.4
+}
+		}
+	}
+
+#End of focuses 
+ }

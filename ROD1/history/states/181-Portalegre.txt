@@ -1,0 +1,41 @@
+
+state={
+	id=181
+	name="STATE_181"
+	manpower = 1904600
+	
+	state_category = large_town
+	
+	resources={
+		tungsten=150 # was: 300
+	}
+
+	history={
+		owner = PTG
+		victory_points = {
+			9787 1
+		}
+		victory_points = {
+			6996 1
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+		}
+		add_core_of = PTG
+
+##State edits start
+
+##State edit for PTG after 1936.1.1
+1936.1.1 = {
+	add_core_of = PTG
+	owner = PTG
+	controller = PTG
+}
+
+##State edits end
+}
+provinces={
+		845 889 938 3969 6818 6996 9787 11885 
+	}
+}

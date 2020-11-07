@@ -1,0 +1,44 @@
+focus_tree = {
+	id = 3319
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = AMU
+		}
+	}
+	#Focus for Post-Sparrow Reformation
+	focus = {
+		id = AMU_postsparrow_reformation
+		icon = GFX_goal_support_democracy
+		x = 6
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power= 150
+		}
+	}
+
+	#Focus for The Amullian Era
+	focus = {
+		id = AMU_the_amullian_era
+		icon = GFX_focus_GRE_reviving_the_spartan_warrior_spirit
+		x = 6
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AMU_postsparrow_reformation }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_stability= 100  set_war_support= 100  add_political_power= 300
+		}
+	}
+
+#End of focuses 
+ }

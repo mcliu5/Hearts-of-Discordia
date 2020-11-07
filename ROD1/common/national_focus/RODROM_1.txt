@@ -1,0 +1,1267 @@
+focus_tree = {
+	id = 1
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = RODROM
+		}
+	}
+	#Focus for Establish the State of Balion
+	focus = {
+		id = RODROM_establish_the_state_of_balion
+		icon = GFX_goal_support_democracy
+		x = 4
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_establish_the_state_of_doulant }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.20
+random_owned_controlled_state
+={ limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } } add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } set_state_flag = BALION_STATE }
+		}
+	}
+
+	#Focus for Research Collaboration with Amullia
+	focus = {
+		id = RODROM_research_collaboration_with_amullia
+		icon = GFX_goal_generic_scientific_exchange
+		x = 9
+		y = 3
+		cost = 11
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_the_amullian_pact }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_research_slot = 1
+army_experience = 15
+navy_experience = 15
+air_experience = 15
+		}
+	}
+
+	#Focus for Establish the State of Doulant
+	focus = {
+		id = RODROM_establish_the_state_of_doulant
+		icon = GFX_goal_support_democracy
+		x = 4
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.2
+random_owned_controlled_state
+={ limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } } add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } set_state_flag = ESTABLISH_DOULANT }
+		}
+	}
+
+	#Focus for The Avalonia Conference
+	focus = {
+		id = RODROM_the_avalonia_conference
+		icon = GFX_goal_molotov_ribbentrop_pact
+		x = 22
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_the_first_republic }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			annex_country= {
+ target = AVA
+}
+  add_state_core= 363  add_state_core= 364  add_state_core= 231
+		}
+	}
+
+	#Focus for Annex Avalonia
+	focus = {
+		id = RODROM_annex_avalonia
+		icon = GFX_goal_poland_goal
+		x = 15
+		y = 5
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_mass_conscription }
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal= { 
+type = annex_everything 
+target = AVA
+}
+		}
+	}
+
+	#Focus for The Romulant Regime
+	focus = {
+		id = RODROM_the_romulant_regime
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 14
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = RODROM_the_romulan_republic 
+			focus = RODROM_elect_a_new_president 
+		}
+		mutually_exclusive = { focus = RODROM_unbaised_regime }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power= 50  add_ideas= ROD_Romulus
+		}
+	}
+
+	#Focus for Establish a Old World Mission
+	focus = {
+		id = RODROM_establish_a_old_world_mission
+		icon = GFX_goal_tfv_generic_tech_sharing
+		x = 7
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_partners_in_the_east }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_research_slot= 1
+		}
+	}
+
+	#Focus for A Discordian Crown
+	focus = {
+		id = RODROM_a_discordian_crown
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 7
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_partners_in_the_east }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability= 0.20
+		}
+	}
+
+	#Focus for Establish the State of Avalon
+	focus = {
+		id = RODROM_establish_the_state_of_avalon
+		icon = GFX_goal_support_democracy
+		x = 4
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_establish_the_state_of_balion }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			owns_state= 364  owns_state= 231
+		}
+		completion_reward = {
+			add_stability = 0.20
+random_owned_controlled_state
+={ limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } } add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } set_state_flag = AVALON_STATE }
+		}
+	}
+
+	#Focus for The Amullian Pact
+	focus = {
+		id = RODROM_the_amullian_pact
+		icon = GFX_goal_tripartite_pact
+		x = 9
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_our_amullian_heritage }
+		mutually_exclusive = { focus = RODROM_partners_in_the_east }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event= {
+days = 1 
+id = rodmod.4
+}
+		}
+	}
+
+	#Focus for Mass Conscription
+	focus = {
+		id = RODROM_mass_conscription
+		icon = GFX_focus_secret_rearmament
+		x = 16
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_the_military_leadership }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower = 150000
+		}
+	}
+
+	#Focus for The Military Leadership
+	focus = {
+		id = RODROM_the_military_leadership
+		icon = GFX_goal_generic_political_pressure
+		x = 16
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_contact_the_military }
+		mutually_exclusive = { 
+			focus = RODROM_begin_the_coupdtat 
+		}
+		mutually_exclusive = { 
+			focus = RODROM_the_compromise 
+		}
+		mutually_exclusive = { 
+			focus = RODROM_CijnEaWh 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			retire_country_leader= yes
+		}
+	}
+
+	#Focus for The Compromise
+	focus = {
+		id = RODROM_the_compromise
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 22
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_contact_the_military }
+		mutually_exclusive = { 
+			focus = RODROM_the_military_leadership 
+		}
+		mutually_exclusive = { 
+			focus = RODROM_begin_the_coupdtat 
+		}
+		mutually_exclusive = { 
+			focus = RODROM_ 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Contact the Military
+	focus = {
+		id = RODROM_contact_the_military
+		icon = GFX_goal_generic_dangerous_deal
+		x = 19
+		y = 1
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_depose_president_romulus }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event= {
+days = 1 
+id = rodmod.3
+}
+		}
+	}
+
+	#Focus for The Romulan Republic
+	focus = {
+		id = RODROM_the_romulan_republic
+		icon = GFX_goal_generic_propaganda
+		x = 14
+		y = 3
+		cost = 15
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_free_and_fair_elections }
+		mutually_exclusive = { focus = RODROM_elect_a_new_president }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Free and Fair Elections
+	focus = {
+		id = RODROM_free_and_fair_elections
+		icon = GFX_goal_support_democracy
+		x = 13
+		y = 2
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_establish_the_republic }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Begin the Coup'd'tat
+	focus = {
+		id = RODROM_begin_the_coupdtat
+		icon = GFX_focus_usa_recruit_the_free_corps
+		x = 19
+		y = 3
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_contact_the_military }
+		mutually_exclusive = { 
+			focus = RODROM_the_military_leadership 
+		}
+		mutually_exclusive = { 
+			focus = RODROM_the_compromise 
+		}
+		mutually_exclusive = { 
+			focus = RODROM_the_compromise 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_eventcountry_event
+= { days = 1 id = rodmod.1 }
+  add_popularity= { 
+ideology = democratic
+popularity = 0.4
+}
+		}
+	}
+
+	#Focus for The Army of Discordia
+	focus = {
+		id = RODROM_the_army_of_discordia
+		icon = GFX_goal_generic_small_arms
+		x = 28
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_contact_the_military }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			army_experience= 15  navy_experience= 15  air_experience= 15
+		}
+	}
+
+	#Focus for Civillian Volunteers
+	focus = {
+		id = RODROM_civillian_volunteers
+		icon = GFX_goal_generic_axis_build_infantry
+		x = 28
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_the_army_of_discordia }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower= 50000
+		}
+	}
+
+	#Focus for A Military Industry
+	focus = {
+		id = RODROM_a_military_industry
+		icon = GFX_goal_generic_production
+		x = 30
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_the_army_of_discordia }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state={
+ limit = {
+ free_building_slots = {
+ building = arms_factory
+ size > 0
+ include_locked = yes
+ }
+
+ }
+
+ add_extra_state_shared_building_slots = 5
+ add_building_construction = {
+ type = arms_factory
+ level = 5
+ instant_build = yes
+ }
+
+ set_state_flag = REPLACE_ME_WITH_UNIQUE_IDENTIFIER
+ }
+		}
+	}
+
+	#Focus for Our Amullian Heritage
+	focus = {
+		id = RODROM_our_amullian_heritage
+		icon = GFX_focus_generic_royal_wedding
+		x = 8
+		y = 1
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_the_house_of_amullia }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+
+	#Focus for Establish the Republic
+	focus = {
+		id = RODROM_establish_the_republic
+		icon = GFX_focus_hol_the_fourth_ally
+		x = 13
+		y = 0
+		cost = 3
+		available_if_capitulated = yes
+		mutually_exclusive = { 
+			focus = RODROM_depose_president_romulus 
+		}
+		mutually_exclusive = { 
+			focus = RODROM_the_house_of_amullia 
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 200
+		}
+	}
+
+	#Focus for Depose President Romulus
+	focus = {
+		id = RODROM_depose_president_romulus
+		icon = GFX_focus_BUL_restore_the_bulgarian_patriarchate
+		x = 19
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		mutually_exclusive = { 
+			focus = RODROM_establish_the_republic 
+		}
+		mutually_exclusive = { 
+			focus = RODROM_contact_the_military 
+		}
+		mutually_exclusive = { 
+			focus = RODROM_the_house_of_amullia 
+		}
+		completion_reward = {
+			add_political_power= -200
+		}
+	}
+
+	#Focus for Elect a New President
+	focus = {
+		id = RODROM_elect_a_new_president
+		icon = GFX_goal_generic_improve_relations
+		x = 12
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_free_and_fair_elections }
+		mutually_exclusive = { focus = RODROM_the_romulan_republic }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The House of Amullia
+	focus = {
+		id = RODROM_the_house_of_amullia
+		icon = GFX_focus_generic_home_defense
+		x = 8
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		mutually_exclusive = { 
+			focus = RODROM_depose_president_romulus 
+			focus = RODROM_establish_the_republic 
+			focus = RODROM_ 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+
+	#Focus for Mass Destruction Doctrine
+	focus = {
+		id = RODROM_mass_destruction_doctrine
+		icon = GFX_goal_generic_occupy_start_war
+		x = 28
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_right_to_bear_arms }
+		mutually_exclusive = { focus = RODROM_the_great_society }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_nuclear_bombs
+= 5
+		}
+	}
+
+	#Focus for Partners in the East
+	focus = {
+		id = RODROM_partners_in_the_east
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 7
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_our_amullian_heritage }
+		mutually_exclusive = { focus = RODROM_the_amullian_pact }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 50
+add_stability = 0.05
+		}
+	}
+
+	#Focus for The Compromise
+	focus = {
+		id = RODROM_the_compromise
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 22
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_contact_the_military }
+		mutually_exclusive = { 
+			focus = RODROM_begin_the_coupdtat 
+		}
+		mutually_exclusive = { 
+			focus = RODROM_the_military_leadership 
+		}
+		mutually_exclusive = { 
+			focus = RODROM_ 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = -350
+		}
+	}
+
+	#Focus for Development of the Capital
+	focus = {
+		id = RODROM_development_of_the_capital
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 0
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state= {
+add_building_construction = {type = infrastructurelevel = 5
+instant_build = yes}
+
+}
+		}
+	}
+
+	#Focus for First Steps to a Peaceful Society
+	focus = {
+		id = RODROM_first_steps_to_a_peaceful_society
+		icon = GFX_focus_smiling_buddha
+		x = 30
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_the_great_society }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower= 30000  set_war_support= .25  add_stability= .30
+		}
+	}
+
+	#Focus for The First Discordia University
+	focus = {
+		id = RODROM_the_first_discordia_university
+		icon = GFX_goal_generic_scientific_exchange
+		x = 2
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_development_of_the_capital }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_research_slot= 1  add_political_power= 50
+		}
+	}
+
+	#Focus for Northern Policy
+	focus = {
+		id = RODROM_northern_policy
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 25
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			start_border_war= { change_state_after_war = no 
+ attacker = { state = 261 = 4 
+ on_win = ROD_Border_Conflict.1 #Event on win 
+ on_lose = ROD_Border_Conflict.3 #Event on loss 
+ on_cancel = ROD_Border_Conflict.4 #Event on cancel 
+ }
+ 
+ defender = { state = STATEID 
+ num_provinces = 4 
+ on_win = japan_border_conflict.3 #Even on win 
+ on_lose = japan_border_conflict.2 #Even on loss 
+ on_cancel = japan_border_conflict.4 #Event on cancel 
+ }
+ }
+		}
+	}
+
+	#Focus for Right to Bear Arms
+	focus = {
+		id = RODROM_right_to_bear_arms
+		icon = GFX_goal_generic_military_deal
+		x = 28
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = RODROM_civillian_volunteers 
+		}
+		prerequisite = { 
+			focus = RODROM_a_military_industry 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile= {
+ type = Infantry_equipment_1
+amount = 2000
+producer = GER 
+}
+  army_experience= 50
+  unlock_national_focus= focus_id (add in later)
+		}
+	}
+
+	#Focus for The Great Society
+	focus = {
+		id = RODROM_the_great_society
+		icon = GFX_goal_continuous_increase_nu
+		x = 30
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_right_to_bear_arms }
+		mutually_exclusive = { focus = RODROM_mass_destruction_doctrine }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state={
+ limit = {
+ free_building_slots = {
+ building = industrial_complex
+ size > 0
+ include_locked = yes
+ }
+
+ }
+
+ add_extra_state_shared_building_slots = 4
+ add_building_construction = {
+ type = industrial_complex
+ level = 4
+ instant_build = yes
+ }
+
+ set_state_flag = REPLACE_ME_WITH_UNIQUE_IDENTIFIER
+ }
+		}
+	}
+
+	#Focus for Upstate Development
+	focus = {
+		id = RODROM_upstate_development
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_development_of_the_capital }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state={
+ limit = {
+ free_building_slots = {
+ building = industrial_complex
+ size > 1
+ include_locked = yes
+ }
+
+ }
+
+ add_extra_state_shared_building_slots = 1
+ add_building_construction = {
+ type = industrial_complex
+ level = 1
+ instant_build = yes
+ }
+
+ set_state_flag = REPLACE_ME_WITH_UNIQUE_IDENTIFIER
+ }
+		}
+	}
+
+	#Focus for Economic Growth
+	focus = {
+		id = RODROM_economic_growth
+		icon = GFX_goal_continuous_non_factory_construct
+		x = 1
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_upstate_development }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state
+={ limit = { free_building_slots = { building = arms_factory size > 0 include_locked = yes } } add_extra_state_shared_building_slots = 2 add_building_construction = { type = arms_factory level = 1 instant_build = yes } set_state_flag = ECONOMIC_GROWTH }
+random_owned_controlled_state
+={ limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } } add_extra_state_shared_building_slots = 2 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } set_state_flag = ECONOMIC_GROWTH_TWO }
+add_stability = 0.3
+		}
+	}
+
+	#Focus for The First Republic
+	focus = {
+		id = RODROM_the_first_republic
+		icon = GFX_goal_generic_major_alliance
+		x = 19
+		y = 5
+		cost = 15
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_wXmlPabS }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government= democratic
+		}
+		completion_reward = {
+			create_country_leader
+create_country_leader= {
+ name = 'Speaker Matthew Hill' 
+desc = 'POLITICS_PETER_II_DESC' 
+picture = '' 
+expire = '1965.1.1' 
+ideology = democratic
+traits = {
+}
+
+
+ }
+
+    has_government= democratic  add_popularity= { 
+ideology = democratic
+popularity = 0.8
+}
+		}
+	}
+
+	#Focus for An Amullian Emperor
+	focus = {
+		id = RODROM_an_amullian_emperor
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 9
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_research_collaboration_with_amullia }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_country_leader
+create_country_leader= {
+ name = 'Emperor Michael I' 
+desc = 'POLITICS_PETER_II_DESC' 
+picture = 'Portrait_Yugoslavia_Peter_II.dds' 
+expire = '1965.1.1' 
+ideology = despotism 
+traits = {
+}
+
+
+ }
+
+    add_popularity= { 
+ideology = neutrality
+popularity = 0.8
+}
+  add_stability= -0.20
+		}
+	}
+
+	#Focus for Our First President
+	focus = {
+		id = RODROM_our_first_president
+		icon = GFX_goal_generic_major_alliance
+		x = 19
+		y = 7
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_the_first_republic }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event= {
+days = 1 
+id = rodmod.14 
+}
+		}
+	}
+
+	#Focus for National Transport
+	focus = {
+		id = RODROM_national_transport
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 0
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state
+= { add_building_construction = { type = infrastructure level = 6 instant_build = yes } }
+random_owned_controlled_state
+= { add_building_construction = { type = infrastructure level = 6 instant_build = yes } }
+		}
+	}
+
+	#Focus for Further Development
+	focus = {
+		id = RODROM_further_development
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 0
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_national_transport }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state
+= { add_building_construction = { type = infrastructure level = 6 instant_build = yes } }
+random_owned_controlled_state
+= { add_building_construction = { type = infrastructure level = 6 instant_build = yes } }
+random_owned_controlled_state
+= { add_building_construction = { type = infrastructure level = 6 instant_build = yes } }
+		}
+	}
+
+	#Focus for Establish Congress
+	focus = {
+		id = RODROM_establish_congress
+		icon = GFX_focus_eng_the_kings_party
+		x = 20
+		y = 6
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_the_first_republic }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Establishment: President Cyan
+	focus = {
+		id = RODROM_the_establishment_president_cyan
+		icon = GFX_goal_tfv_generic_tech_sharing
+		x = 19
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_our_first_president }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_country_leader= {
+ name = 'President Cyan Brooks' 
+desc = 'POLITICS_PETER_II_DESC' 
+picture = '' 
+expire = '1965.1.1' 
+ideology = democratic
+traits = {
+}
+
+ }
+		}
+	}
+
+	#Focus for The Reformer: President Logan
+	focus = {
+		id = RODROM_the_reformer_president_logan
+		icon = GFX_focus_up_joan_of_arc
+		x = 21
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_our_first_president }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_political_party= { 
+ideology = amullian
+popularity = 0.2
+}
+  add_political_power= 50  create_country_leader= {
+ name = 'President Logan Smith' 
+desc = 'POLITICS_PETER_II_DESC' 
+picture = 'Portrait_Yugoslavia_Peter_II.dds' 
+expire = '1965.1.1' 
+ideology = democratic
+traits = {
+}
+
+ }
+  retire_country_leader= yes
+		}
+	}
+
+	#Focus for The Rubber Industry
+	focus = {
+		id = RODROM_the_rubber_industry
+		icon = GFX_focus_generic_rubber
+		x = 2
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_the_oil_industry }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus
+= { bonus = 0.5 uses = 2 category = synth_resources }
+		}
+	}
+
+	#Focus for The Oil Industry
+	focus = {
+		id = RODROM_the_oil_industry
+		icon = GFX_goal_generic_oil_refinery
+		x = 0
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = RODROM_economic_growth 
+		}
+		prerequisite = { 
+			focus = RODROM_further_development 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus
+= { bonus = 1 uses = 2 category = synth_resources }
+		}
+	}
+
+	#Focus for Elect a New President
+	focus = {
+		id = RODROM_elect_a_new_president
+		icon = GFX_goal_generic_improve_relations
+		x = 19
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = RODROM_the_compromise 
+			focus = RODROM_begin_the_coupdtat 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			retire_country_leader
+= yes
+		}
+	}
+
+	#Focus for Ready our Men
+	focus = {
+		id = RODROM_ready_our_men
+		icon = GFX_goal_generic_secret_weapon
+		x = 17
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_mass_conscription }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_tradition = 15
+navy_tradition = 10
+air_tradition = 10
+add_war_support = 0.2
+add_manpower = 250000
+		}
+	}
+
+	#Focus for Subjugate the Western Borderlands
+	focus = {
+		id = RODROM_subjugate_the_western_borderlands
+		icon = GFX_goal_tfv_can_forced_quebec_conscription
+		x = 17
+		y = 6
+		cost = 15
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_ready_our_men }
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal= { 
+type = annex_everything 
+target = KRA
+}
+		}
+	}
+
+	#Focus for Discordian Fleets
+	focus = {
+		id = RODROM_discordian_fleets
+		icon = GFX_goal_generic_navy_battleship
+		x = 32
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			navy_tradition = 20
+random_owned_controlled_state
+={ limit = { free_building_slots = { building = dockyard size > 0 include_locked = yes } } add_extra_state_shared_building_slots = 2 add_building_construction = { type = dockyard level = 1 instant_build = yes } set_state_flag = DISCORDIAN_FLEETS }
+		}
+	}
+
+	#Focus for The Directorate Council
+	focus = {
+		id = RODROM_the_directorate_council
+		icon = GFX_focus_BUL_form_a_regency_council
+		x = 15
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_annex_avalonia }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.20
+add_war_support = 25
+		}
+	}
+
+	#Focus for State Governments
+	focus = {
+		id = RODROM_state_governments
+		icon = GFX_goal_generic_neutrality_focus
+		x = 4
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_establish_the_state_of_avalon }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.3
+		}
+	}
+
+	#Focus for The Coast Guard
+	focus = {
+		id = RODROM_the_coast_guard
+		icon = GFX_focus_generic_destroyer
+		x = 32
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_discordian_fleets }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus
+= { bonus = 1 uses = 2 category = naval_equipment }
+		}
+	}
+
+	#Focus for Unbaised Regime
+	focus = {
+		id = RODROM_unbaised_regime
+		icon = GFX_focus_spa_caudillo_of_spain
+		x = 12
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		mutually_exclusive = { focus = RODROM_the_romulant_regime }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Romulus v. ROD
+	focus = {
+		id = RODROM_romulus_v_rod
+		icon = GFX_goal_generic_soviet_construction
+		x = 20
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = RODROM_the_reformer_president_logan 
+			focus = RODROM_the_establishment_president_cyan 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	#Focus for Keep Romulus
+	focus = {
+		id = RODROM_keep_romulus
+		icon = GFX_focus_smiling_buddha
+		x = 19
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_romulus_v_rod }
+		mutually_exclusive = { focus = RODROM_exile_romulus }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Support Interior Policies
+	focus = {
+		id = RODROM_support_interior_policies
+		icon = GFX_goal_generic_neutrality_focus
+		x = 12
+		y = 5
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_unbaised_regime }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Exile Romulus
+	focus = {
+		id = RODROM_exile_romulus
+		icon = GFX_focus_GRE_metaxism
+		x = 21
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RODROM_romulus_v_rod }
+		mutually_exclusive = { focus = RODROM_keep_romulus }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for War Plan Green
+	focus = {
+		id = RODROM_war_plan_green
+		icon = GFX_goal_poland_goal
+		x = 10
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = RODROM_establish_the_state_of_avalon 
+			focus = RODROM_establish_the_republic 
+			focus = RODROM_the_house_of_amullia 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal= { 
+type = annex_everything 
+target = AVA
+}
+		}
+	}
+
+#End of focuses 
+ }

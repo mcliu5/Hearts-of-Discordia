@@ -1,0 +1,81 @@
+﻿capital = 364
+set_research_slots = 3
+set_stability = 100
+set_war_support = 10
+#Starting tech
+set_technology = {
+	infantry_weapons2 = 1
+	infantry_weapons = 1
+	support_weapons = 1
+	interwar_artillery = 1
+	construction1 = 1
+	electronic_mechanical_engineering = 1
+	radio = 1
+	radio_detection = 1
+	decimetric_radar = 1
+}
+
+#For start date 1939.1.1
+1936.1.1 = {
+	oob = AVA_1936
+	add_political_power = 500
+
+	#complete_national_focus = YOUR_FOCUS_ID
+	#complete_national_focus = YOUR_FOCUS_ID
+
+	set_technology = {
+	}
+	#set_convoys = 100
+}
+
+#Politics for 1936.1.1
+set_politics = {
+	ruling_party = democratic
+	last_election = "1935.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 25
+	fascism = 25
+	communism = 25
+	neutrality = 25
+}
+
+#Politics for 1939.1.1
+1939.1.1 = {
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1936.2.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		democratic = 25
+		fascism = 25
+		communism = 25
+		neutrality = 25
+	}
+}
+
+#Create country leader - Arepis
+create_country_leader = {
+	name = "Arepis"
+	picture = "portrait_yem_imam_yaha.dds"
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = { }
+}
+
+#Create military leader - Araepis
+create_field_marshal = {
+	name = "Araepis"
+	picture = "portrait_yun_long_yun.dds"
+	traits = { old_guard }
+	skill = 5
+	attack_skill = 5
+	defense_skill = 5
+	planning_skill = 5
+	logistics_skill = 10
+	id = 1146232240916893
+}

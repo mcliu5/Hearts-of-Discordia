@@ -1,0 +1,341 @@
+focus_tree = {
+	id = 9456
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = RDO
+		}
+	}
+	#Focus for Peking for Senate
+	focus = {
+		id = RDO_peking_for_senate
+		icon = GFX_focus_usa_honor_the_confederacy
+		x = 5
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RDO_romulus_elected_president }
+		mutually_exclusive = { focus = RDO_suda_for_senate }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Suda for Senate!
+	focus = {
+		id = RDO_suda_for_senate
+		icon = GFX_focus_AST_rats_tobruk
+		x = 0
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RDO_romulus_elected_president }
+		mutually_exclusive = { focus = RDO_peking_for_senate }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for In Suda we Trust
+	focus = {
+		id = RDO_in_suda_we_trust
+		icon = GFX_focus_attack_australia
+		x = 2
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RDO_discredit_long }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Discredit Long
+	focus = {
+		id = RDO_discredit_long
+		icon = GFX_focus_hol_war_on_pacifism
+		x = 2
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RDO_the_stranger }
+		mutually_exclusive = { focus = RDO_discordian_kings_party_formation }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Long Wins the House!
+	focus = {
+		id = RDO_long_wins_the_house
+		icon = GFX_focus_generic_home_defense
+		x = 8
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RDO_discordian_kings_party_formation }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Discordian Kings Party Formation
+	focus = {
+		id = RDO_discordian_kings_party_formation
+		icon = GFX_focus_generic_monarchy_2
+		x = 8
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RDO_the_stranger }
+		mutually_exclusive = { focus = RDO_discredit_long }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Romulus elected President
+	focus = {
+		id = RDO_romulus_elected_president
+		icon = GFX_focus_generic_strike_at_democracy3
+		x = 5
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = RDO_long_wins_the_house 
+		}
+		prerequisite = { 
+			focus = RDO_in_suda_we_trust 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Stranger
+	focus = {
+		id = RDO_the_stranger
+		icon = GFX_RDO_the_stranger-61459
+		x = 8
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RDO_allow_democracy_to_procede }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Exiling Loyalist
+	focus = {
+		id = RDO_exiling_loyalist
+		icon = GFX_focus_CZE_german_puppet
+		x = 12
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RDO_porsche_presidency }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Write the new Constitution
+	focus = {
+		id = RDO_write_the_new_constitution
+		icon = GFX_goal_generic_forceful_treaty
+		x = 16
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RDO_porsche_presidency }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Porsche Presidency
+	focus = {
+		id = RDO_porsche_presidency
+		icon = GFX_focus_generic_strike_at_democracy2
+		x = 14
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RDO_victory }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Defeat!
+	focus = {
+		id = RDO_defeat
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		x = 2
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = RDO_rise_men_of_discordia 
+		}
+		prerequisite = { 
+			focus = RDO_the_grand_coalition 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Victory!
+	focus = {
+		id = RDO_victory
+		icon = GFX_goal_support_fascism
+		x = 14
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = RDO_rise_men_of_discordia 
+		}
+		prerequisite = { 
+			focus = RDO_the_grand_coalition 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Allow Democracy to Procede
+	focus = {
+		id = RDO_allow_democracy_to_procede
+		icon = GFX_goal_support_democracy
+		x = 10
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = RDO_exiling_loyalist 
+		}
+		prerequisite = { 
+			focus = RDO_write_the_new_constitution 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Rise men of Discordia
+	focus = {
+		id = RDO_rise_men_of_discordia
+		icon = GFX_focus_spr_no_pasaran
+		x = 6
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RDO_rise_of_porsche }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Grand Coalition
+	focus = {
+		id = RDO_the_grand_coalition
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 10
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RDO_rise_of_porsche }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Rise of Porsche!
+	focus = {
+		id = RDO_rise_of_porsche
+		icon = GFX_focus_BUL_condemn_macedonian_organizations
+		x = 8
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Long for Senate
+	focus = {
+		id = RDO_long_for_senate
+		icon = GFX_RDO_long_for_senate-61469
+		x = 0
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RDO_romulus_elected_president }
+		mutually_exclusive = { 
+			focus = RDO_suda_for_senate 
+		}
+		mutually_exclusive = { 
+			focus = RDO_peking_for_senate 
+		}
+		mutually_exclusive = { 
+			focus = RDO_ 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Long for Senate
+	focus = {
+		id = RDO_long_for_senate
+		icon = GFX_RDO_long_for_senate-61470
+		x = 0
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RDO_romulus_elected_president }
+		mutually_exclusive = { 
+			focus = RDO_peking_for_senate 
+		}
+		mutually_exclusive = { 
+			focus = RDO_suda_for_senate 
+		}
+		mutually_exclusive = { 
+			focus = RDO_ 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Long for Senate
+	focus = {
+		id = RDO_long_for_senate
+		icon = GFX_goal_generic_territory_or_war
+		x = 0
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = RDO_romulus_elected_president }
+		mutually_exclusive = { 
+			focus = RDO_peking_for_senate 
+		}
+		mutually_exclusive = { 
+			focus = RDO_suda_for_senate 
+		}
+		mutually_exclusive = { 
+			focus = RDO_ 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+#End of focuses 
+ }

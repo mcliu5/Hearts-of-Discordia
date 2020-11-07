@@ -1,0 +1,85 @@
+﻿capital = 458
+set_research_slots = 3
+set_stability = 35
+set_war_support = 100
+#Starting tech
+set_technology = {
+	interwar_artillery = 1
+	infantry_weapons = 1
+	infantry_weapons2 = 1
+	electronic_mechanical_engineering = 1
+	radio = 1
+}
+
+#For start date 1939.1.1
+1939.1.1 = {
+	add_political_power = 500
+
+	#complete_national_focus = YOUR_FOCUS_ID
+	#complete_national_focus = YOUR_FOCUS_ID
+
+	set_technology = {
+	}
+	#set_convoys = 100
+}
+
+#Politics for 1936.1.1
+set_politics = {
+	ruling_party = communism
+	last_election = "1935.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 25
+	fascism = 25
+	communism = 100
+	neutrality = 100
+}
+
+#Politics for 1939.1.1
+1939.1.1 = {
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1936.2.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		democratic = 25
+		fascism = 25
+		communism = 100
+		neutrality = 100
+	}
+}
+
+#Create country leader - The National Council
+create_country_leader = {
+	name = "The National Council"
+	picture = "portrait_spr_anarchist_commune.dds"
+	expire = "1965.1.1"
+	ideology = anti_revisionism
+	traits = { }
+}
+
+#Create country leader - The Joint Chiefs
+create_country_leader = {
+	name = "The Joint Chiefs"
+	picture = "portrait_spa_military_junta.dds"
+	expire = "1965.1.1"
+	ideology = moderatism
+	traits = { }
+}
+
+#Create military leader - Euro II
+create_field_marshal = {
+	name = "Euro II"
+	picture = "portrait_spr_buenaventura_durruti.dds"
+	traits = { old_guard inflexible_strategist }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	id = 1146232240116890
+}

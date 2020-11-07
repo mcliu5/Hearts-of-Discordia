@@ -1,0 +1,112 @@
+﻿capital = 105
+set_research_slots = 3
+set_stability = 25
+set_war_support = 75
+#Starting tech
+set_technology = {
+	interwar_artillery = 1
+	infantry_weapons = 1
+	infantry_weapons2 = 1
+	electronic_mechanical_engineering = 1
+}
+
+#For start date 1939.1.1
+1936.1.1 = {
+	oob = AMU_1936
+	add_political_power = 500
+
+	#complete_national_focus = YOUR_FOCUS_ID
+	#complete_national_focus = YOUR_FOCUS_ID
+
+	set_technology = {
+	}
+	#set_convoys = 100
+}
+
+#Politics for 1936.1.1
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1935.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 25
+	fascism = 15
+	communism = 15
+	neutrality = 45
+}
+
+#Politics for 1939.1.1
+1939.1.1 = {
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1936.2.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		democratic = 25
+		fascism = 15
+		communism = 15
+		neutrality = 45
+	}
+}
+
+#Create country leader - AmullianEmperor
+create_country_leader = {
+	name = "AmullianEmperor"
+	picture = "portrait_spa_mohamed_meziane.dds"
+	expire = "1965.1.1"
+	ideology = moderatism
+	traits = { }
+}
+
+#Create country leader - Cosmical
+create_country_leader = {
+	name = "Cosmical"
+	picture = "leader_unknown.dds"
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = { }
+}
+
+#Create country leader - L0gan
+create_country_leader = {
+	name = "L0gan"
+	picture = "leader_unknown.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = { }
+}
+
+#Create country leader - Mcl5
+create_country_leader = {
+	name = "Mcl5"
+	picture = "leader_unknown.dds"
+	expire = "1965.1.1"
+	ideology = anti_revisionism
+	traits = { }
+}
+
+#Create country leader - AmullianEmperor
+create_country_leader = {
+	name = "AmullianEmperor"
+	picture = "leader_unknown.dds"
+	expire = "1965.1.1"
+	ideology = moderatism
+	traits = { }
+}
+
+#Create military leader - Anthrax "The Cat" Amullian
+create_field_marshal = {
+	name = "Anthrax "The Cat" Amullian"
+	picture = "portrait_spr_janos_galicz.dds"
+	traits = { organisational_leader old_guard inflexible_strategist }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 4
+	id = 1146232235116891
+}

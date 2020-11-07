@@ -1,0 +1,47 @@
+
+state={
+	id=107
+	name="STATE_107"
+
+	history={
+		#owner = YUG
+		buildings = {
+			infrastructure = 6
+			arms_factory = 3
+			industrial_complex = 4
+			air_base = 5
+
+		}
+		victory_points = {
+			11586 15 
+		}
+		add_core_of = YUG
+		add_core_of = SER
+
+##State edits start
+
+##State edit for AMU after 1936.1.1
+1936.1.1 = {
+	add_core_of = AMU
+	owner = AMU
+	controller = AMU
+}
+
+
+##State edit for AMU after 1936.1.1
+1936.1.1 = {
+	add_core_of = AMU
+	owner = AMU
+	controller = AMU
+}
+
+##State edits end
+
+}
+provinces={
+		797 3609 3956 3984 6634 9599 11583 11586 
+	}
+	manpower=1279121
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

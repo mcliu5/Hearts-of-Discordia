@@ -1,0 +1,319 @@
+focus_tree = {
+	id = 19922
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = DAR
+		}
+	}
+	#Focus for Liberate our Amullian Comrades
+	focus = {
+		id = DAR_liberate_our_amullian_comrades
+		icon = GFX_goal_generic_major_war
+		x = 0
+		y = 4
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { focus = DAR_invite_michael_and_the_amullian_revolutionaries }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event= {
+days = 1 
+id = rodmod.9
+}
+		}
+	}
+
+	#Focus for Establish the Ministry for Agriculture and Infastructure
+	focus = {
+		id = DAR_establish_the_ministry_for_agriculture_and_infastructure
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 15
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = DAR_the_armed_militia }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state={
+ limit = {
+ free_building_slots = {
+ building = arms_factory
+ size > 0
+ include_locked = yes
+ }
+
+ }
+
+ add_extra_state_shared_building_slots = 3
+ add_building_construction = {
+ type = arms_factory
+ level = 3
+ instant_build = yes
+ }
+
+ set_state_flag = REPLACE_ME_WITH_UNIQUE_IDENTIFIER
+ }
+		}
+	}
+
+	#Focus for Raise the Militia
+	focus = {
+		id = DAR_raise_the_militia
+		icon = GFX_goal_rhineland
+		x = 13
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = DAR_the_armed_militia }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Invite Michael and the Amullian Revolutionaries
+	focus = {
+		id = DAR_invite_michael_and_the_amullian_revolutionaries
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = DAR_elect_a_speaker }
+		mutually_exclusive = { 
+			focus = DAR_elect_euro 
+		}
+		mutually_exclusive = { 
+			focus = DAR_fail_to_elect_a_speaker 
+		}
+		mutually_exclusive = { 
+			focus = DAR_elect_derpikyu 
+		}
+		mutually_exclusive = { 
+			focus = DAR_ 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government= amullian
+		}
+		completion_reward = {
+			add_political_power= 100
+		}
+	}
+
+	#Focus for Elect a Speaker
+	focus = {
+		id = DAR_elect_a_speaker
+		icon = GFX_goal_generic_propaganda
+		x = 3
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = DAR_call_the_national_congress }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power= 50
+		}
+	}
+
+	#Focus for The Armed Militia
+	focus = {
+		id = DAR_the_armed_militia
+		icon = GFX_goal_generic_small_arms
+		x = 11
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_manpower_in_statestate = CHOOSE STATE 
+amount > 2000
+		}
+	}
+
+	#Focus for Elect Euro
+	focus = {
+		id = DAR_elect_euro
+		icon = GFX_goal_tfv_burn_the_royal_portraits
+		x = 6
+		y = 2
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = DAR_elect_a_speaker }
+		mutually_exclusive = { 
+			focus = DAR_elect_derpikyu 
+		}
+		mutually_exclusive = { 
+			focus = DAR_fail_to_elect_a_speaker 
+		}
+		mutually_exclusive = { 
+			focus = DAR_invite_michael_and_the_amullian_revolutionaries 
+		}
+		mutually_exclusive = { 
+			focus = DAR_ 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government= communism
+		}
+		completion_reward = {
+			add_political_power= -50
+		}
+	}
+
+	#Focus for Fail to Elect a Speaker
+	focus = {
+		id = DAR_fail_to_elect_a_speaker
+		icon = GFX_focus_spr_anarchism_knows_no_borders
+		x = 9
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = DAR_elect_a_speaker }
+		mutually_exclusive = { 
+			focus = DAR_invite_michael_and_the_amullian_revolutionaries 
+		}
+		mutually_exclusive = { 
+			focus = DAR_elect_derpikyu 
+		}
+		mutually_exclusive = { 
+			focus = DAR_elect_euro 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government= fascism
+		}
+		completion_reward = {
+			add_political_power= -100  set_stability= 25
+		}
+	}
+
+	#Focus for The Military Seizes Control
+	focus = {
+		id = DAR_the_military_seizes_control
+		icon = GFX_goal_generic_territory_or_war
+		x = 11
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = DAR_fail_to_elect_a_speaker 
+		}
+		prerequisite = { 
+			focus = DAR_the_armed_militia 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event= {
+days = 1 
+id = rodmod.7
+}
+		}
+	}
+
+	#Focus for The New Military Regime
+	focus = {
+		id = DAR_the_new_military_regime
+		icon = GFX_focus_GRE_byzantine_themata
+		x = 11
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = DAR_the_military_seizes_control }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity= { 
+ideology = fascism 
+popularity = 0.5
+}
+		}
+	}
+
+	#Focus for Elect Derpikyu
+	focus = {
+		id = DAR_elect_derpikyu
+		icon = GFX_goal_support_democracy
+		x = 3
+		y = 2
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = DAR_elect_a_speaker }
+		mutually_exclusive = { 
+			focus = DAR_invite_michael_and_the_amullian_revolutionaries 
+		}
+		mutually_exclusive = { 
+			focus = DAR_elect_euro 
+		}
+		mutually_exclusive = { 
+			focus = DAR_fail_to_elect_a_speaker 
+		}
+		mutually_exclusive = { 
+			focus = DAR_ 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government= democratic
+		}
+		completion_reward = {
+			add_political_power= 500
+		}
+	}
+
+	#Focus for Call the National Congress
+	focus = {
+		id = DAR_call_the_national_congress
+		icon = GFX_goal_generic_alliance
+		x = 3
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power= 50
+		}
+	}
+
+	#Focus for Train our Armies
+	focus = {
+		id = DAR_train_our_armies
+		icon = GFX_goal_continuous_reduce_training_time
+		x = 13
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = DAR_raise_the_militia }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience = 20
+add_tech_bonus
+= { bonus = 1 uses = 1 category = infantry_weapons }
+		}
+	}
+
+#End of focuses 
+ }

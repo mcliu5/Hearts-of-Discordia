@@ -1,0 +1,33 @@
+division_template = {
+	name = "Avalonian Militia"	# For largest Military District Forces (3 brigade forces)
+	# Note: all forces at reserve levels in 1936
+
+	division_names_group = CAN_GAR_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+units = {
+	##### Royal Canadian (Avalonian) Army #####
+	## 1st Miltary District ##
+	division= {	
+		#name = "1st District Militia"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1485 # London ONT
+		division_template = "Avalonian Militia"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+
+	}

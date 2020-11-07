@@ -1,0 +1,28 @@
+state={
+	id=661
+	name="STATE_661"
+	manpower = 17617
+	
+	state_category = wasteland
+	
+	history={
+		#owner = ITA
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = LBA
+
+##State edits start
+
+##State edit for AMU after 1936.1.1
+1936.1.1 = {
+	owner = AMU
+	controller = AMU
+}
+
+##State edits end
+}
+provinces={
+		1174 4051 4117 4176 7154 7194 10037 10067 11940 12009 
+	}
+}

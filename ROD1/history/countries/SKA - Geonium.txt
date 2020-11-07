@@ -1,0 +1,131 @@
+﻿capital = 110
+set_research_slots = 3
+set_stability = 20
+set_war_support = 100
+#Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons2 = 1
+	motorised_infantry = 1
+	support_weapons = 1
+	electronic_mechanical_engineering = 1
+	basic_machine_tools = 1
+}
+
+#For start date 1939.1.1
+1936.1.1 = {
+	add_political_power = 500
+	oob = ENG_1936
+
+	#complete_national_focus = YOUR_FOCUS_ID
+	#complete_national_focus = YOUR_FOCUS_ID
+
+	set_technology = {
+	}
+	#set_convoys = 100
+}
+
+#Politics for 1936.1.1
+set_politics = {
+	ruling_party = democratic
+	last_election = "1935.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 25
+	fascism = 25
+	communism = 25
+	neutrality = 25
+}
+
+#Politics for 1939.1.1
+1939.1.1 = {
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1936.2.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		democratic = 25
+		fascism = 25
+		communism = 25
+		neutrality = 25
+	}
+}
+
+#Create country leader - White
+create_country_leader = {
+	name = "White"
+	picture = "portrait_vladimir_cukavac.dds"
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = { }
+}
+
+#Create country leader - Ezo
+create_country_leader = {
+	name = "Ezo"
+	picture = "portraits_fra_napoleon_vi.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = { }
+}
+
+#Create country leader - Fern
+create_country_leader = {
+	name = "Fern"
+	picture = "portrait_yun_long_yun.dds"
+	expire = "1965.1.1"
+	ideology = anti_revisionism
+	traits = { }
+}
+
+#Create country leader - The Geonian Directorate
+create_country_leader = {
+	name = "The Geonian Directorate"
+	picture = "portrait_spa_military_junta.dds"
+	expire = "1965.1.1"
+	ideology = moderatism
+	traits = { }
+}
+
+#Create military leader - Ezo
+create_field_marshal = {
+	name = "Ezo"
+	picture = "portrait_hol_hein_ter_poorten.dds"
+	traits = { politically_connected media_personality }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+	id = 1146232251916994
+}
+
+#Create military leader - Fern
+create_field_marshal = {
+	name = "Fern"
+	picture = "portrait_ger_felix_steiner.dds"
+	traits = { old_guard brilliant_strategist politically_connected inflexible_strategist }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 5
+	logistics_skill = 2
+	id = 1146232251916995
+}
+
+#Create military leader - Dai
+create_navy_leader = {
+	name = "Dai"
+	picture = "portrait_france_charles_huntziger.dds"
+	traits = { old_guard }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 2
+	coordination_skill = 2
+	id = 1146232251916996
+}

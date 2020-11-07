@@ -1,0 +1,89 @@
+﻿capital = 112
+set_research_slots = 3
+set_stability = 33
+set_war_support = 7
+#Starting tech
+set_technology = {
+}
+
+#For start date 1939.1.1
+1939.1.1 = {
+	add_political_power = 500
+
+	#complete_national_focus = YOUR_FOCUS_ID
+	#complete_national_focus = YOUR_FOCUS_ID
+
+	set_technology = {
+	}
+	#set_convoys = 100
+}
+
+#Politics for 1936.1.1
+set_politics = {
+	ruling_party = democratic
+	last_election = "1935.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 52
+	fascism = 13
+	communism = 8
+	neutrality = 27
+}
+
+#Politics for 1939.1.1
+1939.1.1 = {
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1936.2.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		democratic = 52
+		fascism = 13
+		communism = 8
+		neutrality = 27
+	}
+}
+
+#Create country leader - António Maria da Silva
+create_country_leader = {
+	name = "António Maria da Silva"
+	#Custom image for António Maria da Silva
+	picture = "antnio_maria_da_silva-61656.dds"
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = { }
+}
+
+#Create country leader - Charles of Portugal
+create_country_leader = {
+	name = "Charles of Portugal"
+	#Custom image for Charles of Portugal
+	picture = "charles_of_portugal-61112.dds"
+	expire = "1965.1.1"
+	ideology = moderatism
+	traits = { }
+}
+
+#Create country leader - Óscar Carmona
+create_country_leader = {
+	name = "Óscar Carmona"
+	#Custom image for Óscar Carmona
+	picture = "scar_carmona-61657.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = { }
+}
+
+#Create country leader - Manuel António Ribeiro
+create_country_leader = {
+	name = "Manuel António Ribeiro"
+	#Custom image for Manuel António Ribeiro
+	picture = "manuel_antnio_ribeiro-61661.dds"
+	expire = "1965.1.1"
+	ideology = anti_revisionism
+	traits = { }
+}

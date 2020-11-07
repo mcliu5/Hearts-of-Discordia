@@ -1,0 +1,54 @@
+ideas = {
+	political_advisor = {
+		legion = {
+			allowed = {
+				original_tag = ROD
+			}
+			traits = {staunch_monarchist}
+			picture = /media/get//hoi4/ideas/people/idea_yakov_smushkevich
+		}
+		logan_the_maverick = {
+			allowed = {
+				original_tag = ROD
+			}
+			traits = {democratic_reformer}
+			picture = /media/get//hoi4/ideas/people/idea_walther_funk
+		}
+		the_shadow_trinity = {
+			allowed = {
+				original_tag = ROD
+			}
+			traits = {monarchist_media_mogul}
+			picture = /media/get//hoi4/ideas/people/idea_rudolf_hess
+		}
+	}
+
+	#Military
+	army_chief = {
+	}
+	navy_chief = {
+	}
+	air_chief = {
+	}
+	high_command = {
+	}
+	#Manufacturers
+	tank_manufacturer = {
+		ownership_infantry_company = {
+			allowed = {
+				original_tag = ROD
+			}
+			traits = {infantry_equipment_manufacturer}
+			research_bonus = { armor = 0.10 }
+			picture = /media/get//hoi4/ideas/not_people/idea_bra_monarchist_uprising
+		}
+	}
+	naval_manufacturer = {
+	}
+	aircraft_manufacturer = {
+	}
+	materiel_manufacturer = {
+	}
+	theorist = {
+	}
+}

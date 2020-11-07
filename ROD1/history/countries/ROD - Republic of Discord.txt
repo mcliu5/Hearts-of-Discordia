@@ -1,0 +1,146 @@
+﻿capital = 361
+set_research_slots = 3
+set_stability = 60
+set_war_support = 80
+#Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons2 = 1
+	interwar_artillery = 1
+	artillery1 = 1
+	electronic_mechanical_engineering = 1
+	radio = 1
+	radio_detection = 1
+	decimetric_radar = 1
+	basic_ship_hull_heavy = 1
+	improved_heavy_armor_scheme = 1
+	early_ship_hull_carrier = 1
+	basic_torpedo = 1
+	basic_battery = 1
+	basic_light_battery = 1
+	basic_heavy_battery = 1
+	coastal_defense_ships = 1
+	cruiser_submarines = 1
+	torpedo_cruiser_mtg = 1
+	improved_secondary_battery = 1
+}
+
+#For start date 1939.1.1
+1936.1.1 = {
+	add_political_power = 500
+	oob = ROD_1936
+
+	#complete_national_focus = YOUR_FOCUS_ID
+	#complete_national_focus = YOUR_FOCUS_ID
+
+	set_technology = {
+	}
+	#set_convoys = 100
+}
+
+#Politics for 1936.1.1
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1935.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 25
+	fascism = 10
+	communism = 10
+	neutrality = 55
+}
+
+#Politics for 1939.1.1
+1939.1.1 = {
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1936.2.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		democratic = 25
+		fascism = 10
+		communism = 10
+		neutrality = 55
+	}
+}
+
+#Create country leader - President Romulus
+create_country_leader = {
+	name = "President Romulus"
+	#Custom image for President Romulus
+	picture = "president_romulus-60754.dds"
+	expire = "1965.1.1"
+	ideology = moderatism
+	traits = { }
+}
+
+#Create country leader - Logan Smith
+create_country_leader = {
+	name = "Logan Smith"
+	picture = "portrait_spr_miguel_buiza_fernandez_palacios.dds"
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = { }
+}
+
+#Create country leader - Governor Legion
+create_country_leader = {
+	name = "Governor Legion"
+	picture = "portrait_spa_xavier_of_bourbon_parma.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = { }
+}
+
+#Create country leader - Botonian
+create_country_leader = {
+	name = "Botonian"
+	picture = "portrait_yun_long_yun.dds"
+	expire = "1965.1.1"
+	ideology = anti_revisionism
+	traits = { }
+}
+
+#Create military leader - Romulus
+create_field_marshal = {
+	name = "Romulus"
+	#Custom image for TBC
+	picture = "tbc-60756.dds"
+	traits = { old_guard politically_connected war_hero }
+	skill = 5
+	attack_skill = 5
+	defense_skill = 5
+	planning_skill = 5
+	logistics_skill = 5
+	id = 1146232233316748
+}
+
+#Create military leader - General Botonian
+create_field_marshal = {
+	name = "General Botonian"
+	picture = "portrait_vladimir_cukavac.dds"
+	traits = { politically_connected war_hero career_officer trait_cautious bearer_of_artillery }
+	skill = 5
+	attack_skill = 6
+	defense_skill = 5
+	planning_skill = 4
+	logistics_skill = 5
+	id = 1146232233316895
+}
+
+#Create military leader - Admiral Legion
+create_navy_leader = {
+	name = "Admiral Legion"
+	picture = "portrait_south_america_generic_navy_19.dds"
+	traits = { hidden_sympathies old_guard }
+	skill = 5
+	attack_skill = 4
+	defense_skill = 3
+	maneuvering_skill = 5
+	coordination_skill = 2
+	id = 1146232233316896
+}

@@ -1,0 +1,79 @@
+﻿capital = 466
+set_research_slots = 3
+set_stability = 100
+set_war_support = 100
+#Starting tech
+set_technology = {
+	electronic_mechanical_engineering = 1
+	infantry_weapons = 1
+	infantry_weapons2 = 1
+	improved_infantry_weapons_2 = 1
+	interwar_artillery = 1
+	artillery1 = 1
+	artillery2 = 1
+}
+
+#For start date 1939.1.1
+1939.1.1 = {
+	add_political_power = 500
+	oob = NOR_1936
+
+	#complete_national_focus = YOUR_FOCUS_ID
+	#complete_national_focus = YOUR_FOCUS_ID
+
+	set_technology = {
+	}
+	#set_convoys = 100
+}
+
+#Politics for 1936.1.1
+set_politics = {
+	ruling_party = democratic
+	last_election = "1935.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 25
+	fascism = 25
+	communism = 25
+	neutrality = 25
+}
+
+#Politics for 1939.1.1
+1939.1.1 = {
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1936.2.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		democratic = 25
+		fascism = 25
+		communism = 25
+		neutrality = 25
+	}
+}
+
+#Create country leader - Allan Wankerson
+create_country_leader = {
+	name = "Allan Wankerson"
+	picture = "Portrait_Africa_Generic_navy_1.dds"
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = { }
+}
+
+#Create military leader - Allan Wankerson
+create_field_marshal = {
+	name = "Allan Wankerson"
+	picture = "Portrait_Africa_Generic_navy_1.dds"
+	traits = { old_guard }
+	skill = 11
+	attack_skill = 11
+	defense_skill = 11
+	planning_skill = 11
+	logistics_skill = 10
+	id = 1146232241216903
+}

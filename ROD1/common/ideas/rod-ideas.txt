@@ -1,0 +1,11 @@
+ideas = {
+	country = {
+
+		ROD_romulus__owner = {
+			picture = ROD_romulus__owner-60754
+			modifier = {
+				add_stability= 0.10
+			}
+		}
+	}
+}

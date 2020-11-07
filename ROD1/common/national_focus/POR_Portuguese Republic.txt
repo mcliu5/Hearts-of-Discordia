@@ -1,0 +1,11 @@
+focus_tree = {
+	id = Portuguese Republic
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = POR
+		}
+	}
+#End of focuses 
+ }

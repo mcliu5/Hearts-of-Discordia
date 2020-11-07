@@ -1,0 +1,1040 @@
+focus_tree = {
+	id = 0010
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = KRA
+		}
+	}
+	#Focus for Aegis League
+	focus = {
+		id = KRA_aegis_league
+		icon = GFX_goal_molotov_ribbentrop_pact
+		x = 22
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_kramerian_rennisance }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Form the Peoples Republic of Krameria
+	focus = {
+		id = KRA_form_the_peoples_republic_of_krameria
+		icon = GFX_goal_generic_war_with_comintern
+		x = 25
+		y = 4
+		cost = 15
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_side_with_the_liberals }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for "Resiste et Mords" Doctrine
+	focus = {
+		id = KRA_resiste_et_mords_doctrine
+		icon = GFX_goal_generic_political_pressure
+		x = 6
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_strategic_war_plan }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Unite the People
+	focus = {
+		id = KRA_unite_the_people
+		icon = GFX_goal_generic_national_unity
+		x = 21
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = KRA_declare_the_kingdom_of_krameria 
+			focus = KRA_form_the_peoples_republic_of_krameria 
+			focus = KRA_declare_the_2nd_kramerian_republic 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Declare the Red-Blue-Gold Coalition Terrorists
+	focus = {
+		id = KRA_declare_the_redbluegold_coalition_terrorists
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 27
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_form_the_redbluegold_coalition }
+		mutually_exclusive = { focus = KRA_legitimize_the_redbluegold_coalition }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Krameria First
+	focus = {
+		id = KRA_krameria_first
+		icon = GFX_focus_spa_the_phalanx_ascendant
+		x = 13
+		y = 4
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_isolationist_policy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Peace in our time
+	focus = {
+		id = KRA_peace_in_our_time
+		icon = GFX_focus_eng_imperial_federation
+		x = 8
+		y = 5
+		cost = 14
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_declare_neutrality }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Integrate into the Republic
+	focus = {
+		id = KRA_integrate_into_the_republic
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 4
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_puppet_the_amullians }
+		mutually_exclusive = { focus = KRA_integrate_into_amullia }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Execute Political Prisoners
+	focus = {
+		id = KRA_execute_political_prisoners
+		icon = GFX_focus_TUR_ratify_the_six_arrows
+		x = 6
+		y = 12
+		cost = 15
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_arrest_political_opponents }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Arrest Political Opponents
+	focus = {
+		id = KRA_arrest_political_opponents
+		icon = GFX_focus_mex_arrest_general_cedillo
+		x = 6
+		y = 11
+		cost = 15
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = KRA_repress_the_revolutionaries 
+			focus = KRA_form_the_new_kramerian_empire 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Establish the Constitution
+	focus = {
+		id = KRA_establish_the_constitution
+		icon = GFX_goal_generic_demand_territory
+		x = 9
+		y = 0
+		cost = 9
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Establish the Kramerian Army
+	focus = {
+		id = KRA_establish_the_kramerian_army
+		icon = GFX_goal_rhineland
+		x = 1
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_establish_the_constitution }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Establish the Kramerian Navy
+	focus = {
+		id = KRA_establish_the_kramerian_navy
+		icon = GFX_goal_generic_navy_battleship
+		x = 4
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Establish the Kramerian Air Force
+	focus = {
+		id = KRA_establish_the_kramerian_air_force
+		icon = GFX_goal_generic_air_fighter2
+		x = 8
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_establish_the_constitution }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for War for Independence
+	focus = {
+		id = KRA_war_for_independence
+		icon = GFX_focus_spr_war_of_independence
+		x = 0
+		y = 2
+		cost = 15
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = KRA_establish_the_kramerian_army 
+		}
+		prerequisite = { 
+			focus = KRA_establish_the_kramerian_navy 
+		}
+		prerequisite = { 
+			focus = KRA_establish_the_kramerian_air_force 
+		}
+		mutually_exclusive = { focus = KRA_send_petition_to_the_republic }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Send Petition to the Republic
+	focus = {
+		id = KRA_send_petition_to_the_republic
+		icon = GFX_goal_molotov_ribbentrop_pact
+		x = 8
+		y = 2
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = KRA_establish_the_kramerian_army 
+		}
+		prerequisite = { 
+			focus = KRA_establish_the_kramerian_navy 
+		}
+		prerequisite = { 
+			focus = KRA_establish_the_kramerian_air_force 
+		}
+		mutually_exclusive = { focus = KRA_war_for_independence }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event= {
+days = 1 
+id = rodmod.10
+}
+		}
+	}
+
+	#Focus for Expansionist Policy
+	focus = {
+		id = KRA_expansionist_policy
+		icon = GFX_focus_eng_expose_the_belly_of_the_bear
+		x = 3
+		y = 3
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_send_petition_to_the_republic }
+		mutually_exclusive = { focus = KRA_isolationist_policy }
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	#Focus for Isolationist Policy
+	focus = {
+		id = KRA_isolationist_policy
+		icon = GFX_focus_focus_fra_maquis
+		x = 13
+		y = 3
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_send_petition_to_the_republic }
+		mutually_exclusive = { focus = KRA_expansionist_policy }
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	#Focus for Establish Congress
+	focus = {
+		id = KRA_establish_congress
+		icon = GFX_goal_generic_neutrality_focus
+		x = 19
+		y = 3
+		cost = 13
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_declare_1st_krameria_republic }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Neutral Policy
+	focus = {
+		id = KRA_neutral_policy
+		icon = GFX_goal_generic_neutrality_focus
+		x = 8
+		y = 3
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_send_petition_to_the_republic }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Declare Neutrality
+	focus = {
+		id = KRA_declare_neutrality
+		icon = GFX_goal_generic_defence
+		x = 8
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_neutral_policy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Declare 1st Krameria Republic
+	focus = {
+		id = KRA_declare_1st_krameria_republic
+		icon = GFX_focus_GRE_reviving_the_double_headed_eagle
+		x = 18
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_establish_the_constitution }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event= {
+days = 1 
+id = rodmod.8 
+}
+		}
+	}
+
+	#Focus for Strategic War Plan
+	focus = {
+		id = KRA_strategic_war_plan
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 3
+		y = 4
+		cost = 15
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_expansionist_policy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for War with the Amullians
+	focus = {
+		id = KRA_war_with_the_amullians
+		icon = GFX_goal_generic_major_war
+		x = 4
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_strategic_war_plan }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for War with the Republic
+	focus = {
+		id = KRA_war_with_the_republic
+		icon = GFX_goal_generic_major_war
+		x = 0
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = KRA_strategic_war_plan 
+			focus = KRA_war_for_independence 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for War with the Northerners
+	focus = {
+		id = KRA_war_with_the_northerners
+		icon = GFX_goal_generic_major_war
+		x = 2
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_strategic_war_plan }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Establish Autonomous Colonies
+	focus = {
+		id = KRA_establish_autonomous_colonies
+		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
+		x = 0
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = KRA_war_with_the_amullians 
+			focus = KRA_war_with_the_republic 
+			focus = KRA_war_with_the_northerners 
+		}
+		mutually_exclusive = { focus = KRA_establish_direct_control }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Establish Direct Control
+	focus = {
+		id = KRA_establish_direct_control
+		icon = GFX_focus_hol_the_only_man_in_the_dutch_government
+		x = 6
+		y = 6
+		cost = 15
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = KRA_war_with_the_amullians 
+		}
+		prerequisite = { 
+			focus = KRA_war_with_the_republic 
+		}
+		prerequisite = { 
+			focus = KRA_war_with_the_northerners 
+		}
+		mutually_exclusive = { focus = KRA_establish_autonomous_colonies }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Repress the Revolutionaries
+	focus = {
+		id = KRA_repress_the_revolutionaries
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		x = 6
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_establish_direct_control }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Puppet the Republic of Discord
+	focus = {
+		id = KRA_puppet_the_republic_of_discord
+		icon = GFX_focus_CZE_german_puppet
+		x = 0
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_establish_autonomous_colonies }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Puppet the North
+	focus = {
+		id = KRA_puppet_the_north
+		icon = GFX_focus_CZE_german_puppet
+		x = 2
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_establish_autonomous_colonies }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Puppet the Amullians
+	focus = {
+		id = KRA_puppet_the_amullians
+		icon = GFX_focus_CZE_german_puppet
+		x = 4
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_establish_autonomous_colonies }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Establish Kramerian Influence
+	focus = {
+		id = KRA_establish_kramerian_influence
+		icon = GFX_goal_continuous_def_against_influence
+		x = 2
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = KRA_puppet_the_republic_of_discord 
+			focus = KRA_puppet_the_north 
+			focus = KRA_puppet_the_amullians 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Form the New Kramerian Empire
+	focus = {
+		id = KRA_form_the_new_kramerian_empire
+		icon = GFX_focus_BUL_the_third_bulgarian_empire
+		x = 2
+		y = 10
+		cost = 15
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_establish_kramerian_influence }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Declare Forced Conscription
+	focus = {
+		id = KRA_declare_forced_conscription
+		icon = GFX_focus_mex_soldaderas
+		x = 2
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_form_the_new_kramerian_empire }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Suspend Elections
+	focus = {
+		id = KRA_suspend_elections
+		icon = GFX_goal_generic_territory_or_war
+		x = 0
+		y = 11
+		cost = 15
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_form_the_new_kramerian_empire }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Military Production Projects
+	focus = {
+		id = KRA_military_production_projects
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 4
+		y = 11
+		cost = 14
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_form_the_new_kramerian_empire }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Integrate into Amullia
+	focus = {
+		id = KRA_integrate_into_amullia
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 0
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_puppet_the_republic_of_discord }
+		mutually_exclusive = { focus = KRA_integrate_into_the_republic }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Side with the Liberals
+	focus = {
+		id = KRA_side_with_the_liberals
+		icon = GFX_goal_support_fourth_int
+		x = 25
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_take_political_sides }
+		mutually_exclusive = { focus = KRA_side_with_the_conservatives }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Second Kramerian-Discordian War
+	focus = {
+		id = KRA_the_second_krameriandiscordian_war
+		icon = GFX_goal_generic_major_war
+		x = 15
+		y = 3
+		cost = 14
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_the_first_krameriandiscordian_war }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Side with the Conservatives
+	focus = {
+		id = KRA_side_with_the_conservatives
+		icon = GFX_focus_rom_parties_end
+		x = 21
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_take_political_sides }
+		mutually_exclusive = { focus = KRA_side_with_the_liberals }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Make Peace with the Free Republic
+	focus = {
+		id = KRA_make_peace_with_the_free_republic
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 17
+		y = 3
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_declare_1st_krameria_republic }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event= {
+days = 1 
+id = rodmod.9
+}
+		}
+	}
+
+	#Focus for Communists in Government
+	focus = {
+		id = KRA_communists_in_government
+		icon = GFX_focus_generic_soviet_politics
+		x = 10
+		y = 7
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_state_economy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Work Projects
+	focus = {
+		id = KRA_work_projects
+		icon = GFX_goal_continuous_non_factory_construct
+		x = 8
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_reform_the_economy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Civilian Economy
+	focus = {
+		id = KRA_civilian_economy
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 14
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_reform_the_economy }
+		mutually_exclusive = { focus = KRA_mixed_economy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Mixed Economy
+	focus = {
+		id = KRA_mixed_economy
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 12
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_reform_the_economy }
+		mutually_exclusive = { 
+			focus = KRA_state_economy 
+			focus = KRA_civilian_economy 
+			focus = KRA_ 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Reform the Economy
+	focus = {
+		id = KRA_reform_the_economy
+		icon = GFX_goal_continuous_non_factory_construct
+		x = 13
+		y = 5
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_krameria_first }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for State Economy
+	focus = {
+		id = KRA_state_economy
+		icon = GFX_goal_support_communism
+		x = 10
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_reform_the_economy }
+		mutually_exclusive = { focus = KRA_mixed_economy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The First Kramerian-Discordian War
+	focus = {
+		id = KRA_the_first_krameriandiscordian_war
+		icon = GFX_goal_generic_major_war
+		x = 15
+		y = 2
+		cost = 14
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_declare_1st_krameria_republic }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Take Political Sides
+	focus = {
+		id = KRA_take_political_sides
+		icon = GFX_focus_BUL_form_a_regency_council
+		x = 23
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_declare_1st_krameria_republic }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Declare the 2nd Kramerian Republic
+	focus = {
+		id = KRA_declare_the_2nd_kramerian_republic
+		icon = GFX_focus_GRE_reviving_the_double_headed_eagle
+		x = 17
+		y = 4
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = KRA_make_peace_with_the_free_republic 
+			focus = KRA_establish_congress 
+			focus = KRA_the_second_krameriandiscordian_war 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Unify against The Legion
+	focus = {
+		id = KRA_unify_against_the_legion
+		icon = GFX_goal_tripartite_pact
+		x = 20
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_kramerian_rennisance }
+		mutually_exclusive = { focus = KRA_join_the_legion }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Join the DMDAO
+	focus = {
+		id = KRA_join_the_dmdao
+		icon = GFX_goal_generic_small_arms
+		x = 20
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_unify_against_the_legion }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Form the Red-Blue-Gold Coalition
+	focus = {
+		id = KRA_form_the_redbluegold_coalition
+		icon = GFX_goal_generic_neutrality_focus
+		x = 25
+		y = 8
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_kramerian_rennisance }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Legitimize the Red-Blue-Gold Coalition
+	focus = {
+		id = KRA_legitimize_the_redbluegold_coalition
+		icon = GFX_goal_continuous_restrict_freedom
+		x = 23
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_form_the_redbluegold_coalition }
+		mutually_exclusive = { focus = KRA_declare_the_redbluegold_coalition_terrorists }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Oppose Romulus
+	focus = {
+		id = KRA_oppose_romulus
+		icon = GFX_goal_continuous_suppression
+		x = 23
+		y = 10
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_legitimize_the_redbluegold_coalition }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Impeach Romulus
+	focus = {
+		id = KRA_impeach_romulus
+		icon = GFX_goal_generic_improve_relations
+		x = 23
+		y = 11
+		cost = 14
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_oppose_romulus }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Romulan Dictatorship
+	focus = {
+		id = KRA_romulan_dictatorship
+		icon = GFX_focus_focus_fra_third_empire
+		x = 27
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_support_romulus }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Declare the 3rd Kramerian Republic
+	focus = {
+		id = KRA_declare_the_3rd_kramerian_republic
+		icon = GFX_focus_GRE_reviving_the_double_headed_eagle
+		x = 25
+		y = 12
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = KRA_impeach_romulus 
+			focus = KRA_romulan_dictatorship 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Reform the Presidency
+	focus = {
+		id = KRA_reform_the_presidency
+		icon = GFX_goal_continuous_restrict_freedom
+		x = 24
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_unite_the_people }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Kramerian Rennisance
+	focus = {
+		id = KRA_kramerian_rennisance
+		icon = GFX_focus_jap_manchurian_project
+		x = 21
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = KRA_reform_the_presidency 
+			focus = KRA_reform_the_courts 
+			focus = KRA_reform_the_congress 
+			focus = KRA_reform_the_constitution 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Declare the Kingdom of Krameria
+	focus = {
+		id = KRA_declare_the_kingdom_of_krameria
+		icon = GFX_focus_eng_god_save_the_king
+		x = 21
+		y = 4
+		cost = 15
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_side_with_the_conservatives }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Reform the Courts
+	focus = {
+		id = KRA_reform_the_courts
+		icon = GFX_goal_generic_neutrality_focus
+		x = 18
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_unite_the_people }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Reform the Congress
+	focus = {
+		id = KRA_reform_the_congress
+		icon = GFX_focus_TUR_reform_the_balkan_pact
+		x = 20
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_unite_the_people }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Reform the Constitution
+	focus = {
+		id = KRA_reform_the_constitution
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 22
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_unite_the_people }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Join The Legion
+	focus = {
+		id = KRA_join_the_legion
+		icon = GFX_goal_tripartite_pact
+		x = 17
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_kramerian_rennisance }
+		mutually_exclusive = { focus = KRA_unify_against_the_legion }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Support Romulus
+	focus = {
+		id = KRA_support_romulus
+		icon = GFX_focus_generic_support_the_left_right
+		x = 27
+		y = 10
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = KRA_declare_the_redbluegold_coalition_terrorists }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+#End of focuses 
+ }

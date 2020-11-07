@@ -1,0 +1,39 @@
+state={
+	id=795
+	name="STATE_795"
+	resources={
+		chromium=20.000 #added due to portugal setup
+	}
+	history={
+		#owner = POR
+		victory_points = {
+			9869 1 
+		}
+		victory_points = {
+			924 1 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+
+		}
+		add_core_of = POR
+
+##State edits start
+
+##State edit for PTG after 1936.1.1
+1936.1.1 = {
+	add_core_of = PTG
+	owner = PTG
+	controller = PTG
+}
+
+##State edits end
+}
+provinces={
+		844 924 3846 3886 3926 6986 9869 11768 
+	}
+	manpower=729712
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

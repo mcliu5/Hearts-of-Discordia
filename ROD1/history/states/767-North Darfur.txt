@@ -1,0 +1,42 @@
+state=
+{
+	id=767
+	name="STATE_767" # North Darfur
+	manpower = 8143
+	
+	state_category = wasteland
+	impassable = yes
+	
+	history= {
+		add_core_of = SUD
+		#owner = ENG
+		buildings = {
+			infrastructure = 0
+		}
+
+##State edits start
+
+##State edit for AMU after 1936.1.1
+1936.1.1 = {
+	owner = AMU
+	controller = AMU
+}
+
+
+##State edit for AMU after 1936.1.1
+1936.1.1 = {
+}
+
+
+##State edit for DAR after 1936.1.1
+1936.1.1 = {
+}
+
+##State edits end
+
+
+}
+provinces={
+		7987 8103 10900
+	}
+}

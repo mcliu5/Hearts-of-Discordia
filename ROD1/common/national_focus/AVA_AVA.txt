@@ -1,0 +1,119 @@
+focus_tree = {
+	id = AVA
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = AVA
+		}
+	}
+	#Focus for Azeran
+	focus = {
+		id = AVA_azeran
+		icon = GFX_goal_tfv_generic_tech_sharing
+		x = 13
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 0.5 
+uses = 2 
+category = radio_tech
+}
+		}
+	}
+
+	#Focus for Avalonian Congress
+	focus = {
+		id = AVA_avalonian_congress
+		icon = GFX_goal_tripartite_pact
+		x = 7
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower= 8000  add_stability= 0.05
+		}
+	}
+
+	#Focus for The Avalonian Democratic Party
+	focus = {
+		id = AVA_the_avalonian_democratic_party
+		icon = GFX_goal_generic_alliance
+		x = 8
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = AVA_avalonian_congress }
+		mutually_exclusive = { focus = AVA_the_avalonian_restoration }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Avalonian Restoration
+	focus = {
+		id = AVA_the_avalonian_restoration
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 6
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AVA_avalonian_congress }
+		mutually_exclusive = { focus = AVA_the_avalonian_democratic_party }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 75
+add_stability = -0.1
+set_party_name
+= { ideology = democratic long_name = restorationist_party name = restorationists }
+		}
+	}
+
+	#Focus for Avalonian Defense Force
+	focus = {
+		id = AVA_avalonian_defense_force
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 6
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AVA_the_avalonian_restoration }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_unit
+= { division = 'name = Militia division_template = ADF_Division starting_experience_factor = 1.5' }
+create_unit
+= { division = 'name = Militia division_template = ADF_Division starting_experience_factor = 1.5' }
+create_unit
+= { division = 'name = Militia division_template = ADF_Division starting_experience_factor = 1.5' }
+create_unit
+= { division = 'name = Militia division_template = ADF_Division starting_experience_factor = 1.5' }
+create_unit
+= { division = 'name = Militia division_template = ADF_Division starting_experience_factor = 1.5' }
+create_unit
+= { division = 'name = Militia division_template = ADF_Division starting_experience_factor = 1.5' }
+create_unit
+= { division = 'name = Militia division_template = ADF_Division starting_experience_factor = 1.5' }
+create_unit
+= { division = 'name = Militia division_template = ADF_Division starting_experience_factor = 1.5' }
+create_unit
+= { division = 'name = Militia division_template = ADF_Division starting_experience_factor = 1.5' }
+create_unit
+= { division = 'name = Militia division_template = ADF_Division starting_experience_factor = 1.5' }
+		}
+	}
+
+#End of focuses 
+ }

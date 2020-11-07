@@ -1,0 +1,350 @@
+focus_tree = {
+	id = 1236
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SOV
+		}
+	}
+	#Focus for Back Into The Fold
+	focus = {
+		id = SOV_back_into_the_fold
+		icon = GFX_goal_support_fourth_int
+		x = 2
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_the_december_revolution }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The First Aerial Divisions
+	focus = {
+		id = SOV_the_first_aerial_divisions
+		icon = GFX_goal_generic_build_airforce
+		x = 26
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_formation_of_the_red_army }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Transformation of the Supreme Navy
+	focus = {
+		id = SOV_transformation_of_the_supreme_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 14
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_formation_of_the_red_army }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Formation of the Red Army
+	focus = {
+		id = SOV_formation_of_the_red_army
+		icon = GFX_goal_generic_axis_build_infantry
+		x = 20
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The December Revolution
+	focus = {
+		id = SOV_the_december_revolution
+		icon = GFX_goal_support_communism
+		x = 2
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Operation Borscht
+	focus = {
+		id = SOV_operation_borscht
+		icon = GFX_focus_generic_provoke_border_clashes
+		x = 2
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_back_into_the_fold }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for First Stalin Defense Plan
+	focus = {
+		id = SOV_first_stalin_defense_plan
+		icon = GFX_goal_generic_defence
+		x = 4
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_back_into_the_fold }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Long March
+	focus = {
+		id = SOV_the_long_march
+		icon = GFX_focus_YUG_pan_slavic_congress
+		x = 2
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_the_imranian_rebellion }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Mass Mechanization
+	focus = {
+		id = SOV_mass_mechanization
+		icon = GFX_focus_generic_tank_production
+		x = 22
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_formation_of_the_red_army }
+		mutually_exclusive = { focus = SOV_army_collectivism }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Imranian Rebellion
+	focus = {
+		id = SOV_the_imranian_rebellion
+		icon = GFX_focus_spr_class_war
+		x = 2
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Finally At Peace
+	focus = {
+		id = SOV_finally_at_peace
+		icon = GFX_focus_focus_fra_liberte_egalite_solidarite
+		x = 20
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_the_long_march }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for NKVD Supremacy
+	focus = {
+		id = SOV_nkvd_supremacy
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 0
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_back_into_the_fold }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Army Collectivism
+	focus = {
+		id = SOV_army_collectivism
+		icon = GFX_goal_tfv_can_forced_quebec_conscription
+		x = 18
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_formation_of_the_red_army }
+		mutually_exclusive = { focus = SOV_mass_mechanization }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Preparing For His Return
+	focus = {
+		id = SOV_preparing_for_his_return
+		icon = GFX_focus_fra_loyalty_trotzky
+		x = 10
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_a_new_socialist_state }
+		mutually_exclusive = { 
+			focus = SOV_forging_our_own_path 
+		}
+		mutually_exclusive = { 
+			focus = SOV_the_third_way 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Forging Our Own Path
+	focus = {
+		id = SOV_forging_our_own_path
+		icon = GFX_focus_fra_loyalty_stalin
+		x = 2
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_a_new_socialist_state }
+		mutually_exclusive = { focus = SOV_preparing_for_his_return }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Third Way
+	focus = {
+		id = SOV_the_third_way
+		icon = GFX_goal_support_democracy
+		x = 18
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_a_new_socialist_state }
+		mutually_exclusive = { focus = SOV_preparing_for_his_return }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Voronezh Regime
+	focus = {
+		id = SOV_the_voronezh_regime
+		icon = GFX_focus_usa_voter_registration_act
+		x = 30
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_destroying_socialist_idealism }
+		mutually_exclusive = { 
+			focus = SOV_the_fade_of_totaliarianism 
+		}
+		mutually_exclusive = { 
+			focus = SOV_reestablish_the_supreme_empire 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for A New Socialist State
+	focus = {
+		id = SOV_a_new_socialist_state
+		icon = GFX_focus_generic_soviet_politics
+		x = 10
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_finally_at_peace }
+		mutually_exclusive = { focus = SOV_destroying_socialist_idealism }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Destroying Socialist Idealism
+	focus = {
+		id = SOV_destroying_socialist_idealism
+		icon = GFX_focus_attack_soviet
+		x = 30
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_finally_at_peace }
+		mutually_exclusive = { focus = SOV_a_new_socialist_state }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Re-establish the Supreme Empire
+	focus = {
+		id = SOV_reestablish_the_supreme_empire
+		icon = GFX_focus_ger_return_of_the_kaiser
+		x = 38
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_destroying_socialist_idealism }
+		mutually_exclusive = { focus = SOV_the_voronezh_regime }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Fade OF Totaliarianism
+	focus = {
+		id = SOV_the_fade_of_totaliarianism
+		icon = GFX_goal_continuous_boost_freedom
+		x = 23
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_destroying_socialist_idealism }
+		mutually_exclusive = { focus = SOV_the_voronezh_regime }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Modernization of The Red Army Ranks
+	focus = {
+		id = SOV_modernization_of_the_red_army_ranks
+		icon = GFX_goal_generic_build_tank
+		x = 22
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_formation_of_the_red_army }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Begin mass Equipment Productions
+	focus = {
+		id = SOV_begin_mass_equipment_productions
+		icon = GFX_goal_generic_army_artillery2
+		x = 18
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_army_collectivism }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+#End of focuses 
+ }
